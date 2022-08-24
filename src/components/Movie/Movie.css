@@ -1,0 +1,13 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 280px;
+    box-shadow: 0 3px 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.movie-poster {
+    height: 362px;
+    object-fit: cover;
+}
