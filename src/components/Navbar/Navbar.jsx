@@ -15,7 +15,11 @@ const Navbar = () => {
   };
   return (
     <header>
-      <h3>Movies App</h3>
+      <span className="app-logo">
+        <Link className="app-logo" to="/">
+          Movies App
+        </Link>
+      </span>
 
       <nav ref={navRef}>
         <div className="navLink">

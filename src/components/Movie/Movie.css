@@ -5,9 +5,46 @@
     width: 280px;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     cursor: pointer;
+    margin-bottom: 20px;
 }
-
+.movie:hover {
+    transform: scale(1.05);
+}
 .movie-poster {
     height: 362px;
     object-fit: cover;
+}
+.movie-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin: 15px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.info-span {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    text-transform: capitalize;
+}
+ .nominateBtn {
+    background-color: #008f39;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nominateBtn:hover {
+    background-color: #00a843;
 }
