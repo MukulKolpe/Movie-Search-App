@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaTimes, FaBars } from "react-icons/fa";
 import "./Navbar.css";
 import { useRef } from "react";
+import LiveTvIcon from "@mui/icons-material/LiveTv";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -16,8 +17,9 @@ const Navbar = () => {
   return (
     <header>
       <span className="app-logo">
-        <Link className="app-logo" to="/">
-          Movies App
+        <Link className="app-logo-link" to="/">
+          <LiveTvIcon fontSize="large" />
+          <span>Movies App</span>
         </Link>
       </span>
 
