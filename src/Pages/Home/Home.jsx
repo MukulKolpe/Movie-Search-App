@@ -39,7 +39,9 @@ function Home() {
 
   function nominateMovie(movie) {
     const newNom = [...nom, movie];
+
     setNom(newNom);
+
     saveToLocal(newNom);
   }
 
@@ -61,22 +63,6 @@ function Home() {
           movies={movies}
           handleNomClick={nominateMovie}
           nomComponent={AddNomination}
-        />
-      </div>
-      <h2
-        style={{
-          alignContent: "center",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        Nominations
-      </h2>
-      <div className="row">
-        <MovieList
-          movies={nom}
-          handleNomClick={removeNomMovie}
-          nomComponent={RemoveNomination}
         />
       </div>
     </div>

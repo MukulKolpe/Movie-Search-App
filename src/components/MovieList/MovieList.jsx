@@ -1,5 +1,6 @@
 import React from "react";
 import "./MovieList.css";
+
 function MovieList(props) {
   const NomComponent = props.nomComponent;
   return (

@@ -51,11 +51,12 @@
     color: rgb(0, 0, 0);
     border: none;
     font-size: 14px;
-    padding: 6px;
+    padding: 4px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    
+    font-size: 18px;
+    font-weight: 500;
 
 }
 .nominateBtn:hover {
