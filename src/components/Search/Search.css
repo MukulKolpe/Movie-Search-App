@@ -1,0 +1,21 @@
+
+.search-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 15px;
+
+}
+.text-input {
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    border-radius: 8px;
+    width: 40%;
+}
+
+@media only Screen and (max-width: 1024px) {
+    .text-input {
+        width: 70%;
+    }
+}

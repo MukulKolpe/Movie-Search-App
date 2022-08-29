@@ -7,11 +7,21 @@
     cursor: pointer;
     margin-bottom: 20px;
 }
+.movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: space-evenly;
+    gap: 24px;
+    
+}
+
 .movie:hover {
     transform: scale(1.05);
 }
 .movie-poster {
-    height: 362px;
+    height: 300px;
     object-fit: cover;
 }
 .movie-name {
@@ -44,6 +54,9 @@
     padding: 6px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    
+
 }
 .nominateBtn:hover {
     background-color: #00a843;
