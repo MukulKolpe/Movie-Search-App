@@ -33,7 +33,10 @@ Make sure you have node.js installed.
  ```
  yarn install
  ```
-5. 
+5. Generate your own API key on [OMDB API](https://www.omdbapi.com/)  
+6. Create .env file inside the root directory.  
+7. Write ```REACT_APP_API_KEY="YOUR-API-KEY"``` inside .env file.   
+8. 
  ```
  yarn start
  ```
