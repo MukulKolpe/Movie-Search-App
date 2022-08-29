@@ -39,7 +39,7 @@ Make sure you have node.js installed.
  ```
    
 
-## Deployed [here](https://movie-search-bymukul.netlify.app/)
+## Hosted [here](https://movie-search-bymukul.netlify.app/)
 
 ## License
 
