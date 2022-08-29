@@ -13,6 +13,7 @@ function Search(props) {
         sx={{
           "& > :not(style)": { m: 1 },
         }}
+        autoSave="off"
         noValidate
       >
         <SearchIcon fontSize="large" />

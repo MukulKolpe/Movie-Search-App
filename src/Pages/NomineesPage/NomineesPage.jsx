@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import BookmarkRemoveIcon from "@mui/icons-material/BookmarkRemove";
 
 import "./NomineesPage.css";
 import RemoveNomination from "../../components/Buttons/RemoveNomination";
@@ -24,7 +23,6 @@ const NomineesPage = (props) => {
     setNom(newNom);
     saveToLocal(newNom);
   }
-  const NomComponent = props.nomComponent;
   return (
     <>
       <div className="movie-list">

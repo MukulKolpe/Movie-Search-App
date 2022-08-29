@@ -3,7 +3,6 @@ import Axios from "axios";
 import MovieList from "../../components/MovieList/MovieList";
 import Search from "../../components/Search/Search";
 import AddNomination from "../../components/Buttons/AddNomination";
-import RemoveNomination from "../../components/Buttons/RemoveNomination";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function Home() {
@@ -42,14 +41,6 @@ function Home() {
 
     setNom(newNom);
 
-    saveToLocal(newNom);
-  }
-
-  function removeNomMovie(movie) {
-    const newNom = nom.filter(
-      (nomination) => nomination.imdbID !== movie.imdbID
-    );
-    setNom(newNom);
     saveToLocal(newNom);
   }
 
