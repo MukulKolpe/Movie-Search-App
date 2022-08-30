@@ -35,7 +35,9 @@ function Home() {
   }, []);
 
   function saveToLocal(items) {
-    localStorage.setItem("Nominations", JSON.stringify(items));
+    if (items.length < 6) {
+      localStorage.setItem("Nominations", JSON.stringify(items));
+    }
   }
 
   function nominateMovie(movie) {
