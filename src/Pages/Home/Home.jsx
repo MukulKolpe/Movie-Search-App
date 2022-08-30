@@ -3,6 +3,8 @@ import Axios from "axios";
 import MovieList from "../../components/MovieList/MovieList";
 import Search from "../../components/Search/Search";
 import AddNomination from "../../components/Buttons/AddNomination";
+import heroImg from "../../Assets/HeroImg.webp";
+import "./Home.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function Home() {
@@ -50,11 +52,17 @@ function Home() {
         <Search value={search} setValue={setSearch} />
       </div>
       <div className="row">
-        <MovieList
-          movies={movies}
-          handleNomClick={nominateMovie}
-          nomComponent={AddNomination}
-        />
+        {movies.length > 0 ? (
+          <MovieList
+            movies={movies}
+            handleNomClick={nominateMovie}
+            nomComponent={AddNomination}
+          />
+        ) : (
+          <div className="no-movies">
+            <img src={heroImg} alt="Movies-Landing" className="heroImg" />
+          </div>
+        )}
       </div>
     </div>
   );

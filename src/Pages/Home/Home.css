@@ -1,29 +1,25 @@
-.search-input{
+.no-movies {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    border-radius: 15px;
-
 }
-.text-input {
-    box-shadow: 0 2px 5px rgb(0, 0, 0);
-    border-radius: 8px;
-    width: 40%;
+.heroImg {
+    width: 50%;
+    object-fit: cover;   
 }
-.movie-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 30px;
-    justify-content: space-evenly;
-    gap: 24px;
-    
-}
-
 @media only Screen and (max-width: 1024px) {
-    .text-input {
-        width: 70%;
+    .no-movies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .heroImg {
+        width: 90%;
+        object-fit: cover;
+       
     }
 }

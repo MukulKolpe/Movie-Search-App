@@ -1,0 +1,23 @@
+.no-nom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.heroImg {
+    height: 450px;
+    object-fit: cover;
+}
+@media only Screen and (max-width: 1024px) {
+    .no-nom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .heroImg {
+        height: 200px;
+    }
+}

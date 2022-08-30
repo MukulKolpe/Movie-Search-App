@@ -55,7 +55,7 @@ nav a {
 
 }
 .navLink {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
     margin-top: 3rem;
@@ -66,6 +66,7 @@ nav a {
 
 nav a:hover {
     color: #00a843;
+   
 }
 
 header .nav-btn {
