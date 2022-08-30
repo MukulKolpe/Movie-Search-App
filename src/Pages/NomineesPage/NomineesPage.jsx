@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-
+import { ToastContainer, toast, Flip } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./NomineesPage.css";
 import RemoveNomination from "../../components/Buttons/RemoveNomination";
 import heroImg from "../../Assets/HeroImg2.webp";
 
 const NomineesPage = (props) => {
+  const notify = () => toast.success("Movie Removed!");
   const [nom, setNom] = useState([]);
   useEffect(() => {
     let oldFav = localStorage.getItem("Nominations");
@@ -43,11 +45,26 @@ const NomineesPage = (props) => {
                 </div>
 
                 <button
-                  onClick={() => removeNomMovie(movie)}
+                  onClick={() => {
+                    removeNomMovie(movie);
+                    notify();
+                  }}
                   className="nominateBtn"
                 >
                   <RemoveNomination />
                 </button>
+                <ToastContainer
+                  position="top-right"
+                  autoClose={500}
+                  hideProgressBar
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  transition={Flip}
+                />
               </div>
             ))
           ) : (

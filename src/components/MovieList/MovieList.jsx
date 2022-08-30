@@ -1,7 +1,10 @@
 import React from "react";
 import "./MovieList.css";
+import { ToastContainer, toast, Flip } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function MovieList(props) {
+  const notify = () => toast.success("Movie Nominated!");
   const NomComponent = props.nomComponent;
   return (
     <>
@@ -19,11 +22,26 @@ function MovieList(props) {
               <span className="info-span">{movie.Type}</span>
             </div>
             <button
-              onClick={() => props.handleNomClick(movie)}
+              onClick={() => {
+                props.handleNomClick(movie);
+                notify();
+              }}
               className="nominateBtn"
             >
               <NomComponent />
             </button>
+            <ToastContainer
+              position="top-right"
+              autoClose={500}
+              hideProgressBar
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              transition={Flip}
+            />
           </div>
         ))}
       </div>
