@@ -5,12 +5,14 @@ import Search from "../../components/Search/Search";
 import AddNomination from "../../components/Buttons/AddNomination";
 import heroImg from "../../Assets/HeroImg.webp";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function Home() {
   const [movies, searchMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [nom, setNom] = useState([]);
+  const navigate = useNavigate();
 
   const movieRequest = async (searchString) => {
     const url = `https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`;
@@ -37,6 +39,9 @@ function Home() {
   function saveToLocal(items) {
     if (items.length < 6) {
       localStorage.setItem("Nominations", JSON.stringify(items));
+    } else {
+      alert("You have reached the maximum number of nominations");
+      navigate("/nominees");
     }
   }
 
