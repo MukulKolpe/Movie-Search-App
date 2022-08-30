@@ -29,50 +29,48 @@ const NomineesPage = (props) => {
   return (
     <>
       <div className="movie-list">
-        <div>
-          {nom.length > 0 ? (
-            nom.map((movie, index) => (
-              <div className="movie">
-                <img
-                  src={movie.Poster}
-                  alt="Movie Poster"
-                  className="movie-poster"
-                ></img>
-                <span className="movie-name">{movie.Title}</span>
-                <div className="movie-info">
-                  <span className="info-span">Year: {movie.Year}</span>
-                  <span className="info-span">{movie.Type}</span>
-                </div>
-
-                <button
-                  onClick={() => {
-                    removeNomMovie(movie);
-                    notify();
-                  }}
-                  className="nominateBtn"
-                >
-                  <RemoveNomination />
-                </button>
-                <ToastContainer
-                  position="top-right"
-                  autoClose={500}
-                  hideProgressBar
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                  transition={Flip}
-                />
+        {nom.length > 0 ? (
+          nom.map((movie, index) => (
+            <div className="movie">
+              <img
+                src={movie.Poster}
+                alt="Movie Poster"
+                className="movie-poster"
+              ></img>
+              <span className="movie-name">{movie.Title}</span>
+              <div className="movie-info">
+                <span className="info-span">Year: {movie.Year}</span>
+                <span className="info-span">{movie.Type}</span>
               </div>
-            ))
-          ) : (
-            <div className="no-nom">
-              <img src={heroImg} alt="Movies-Landing" className="heroImg" />
+
+              <button
+                onClick={() => {
+                  removeNomMovie(movie);
+                  notify();
+                }}
+                className="nominateBtn"
+              >
+                <RemoveNomination />
+              </button>
+              <ToastContainer
+                position="top-right"
+                autoClose={500}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                transition={Flip}
+              />
             </div>
-          )}
-        </div>
+          ))
+        ) : (
+          <div className="no-nom">
+            <img src={heroImg} alt="Movies-Landing" className="heroImg" />
+          </div>
+        )}
       </div>
     </>
   );
