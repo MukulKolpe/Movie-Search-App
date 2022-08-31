@@ -15,9 +15,9 @@ function MovieList(props) {
             <motion.div
               key={index}
               layout
-              animate={{ opacity: 1, scale: 1 }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              exit={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              exit={{ opacity: 0 }}
               className="movie"
             >
               <img
