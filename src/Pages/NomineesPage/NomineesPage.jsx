@@ -52,18 +52,6 @@ const NomineesPage = (props) => {
               >
                 <RemoveNomination />
               </button>
-              <ToastContainer
-                position="top-right"
-                autoClose={500}
-                hideProgressBar
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                transition={Flip}
-              />
             </div>
           ))
         ) : (
@@ -72,6 +60,18 @@ const NomineesPage = (props) => {
           </div>
         )}
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={500}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        transition={Flip}
+      />
     </>
   );
 };

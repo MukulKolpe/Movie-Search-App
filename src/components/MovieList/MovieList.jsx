@@ -30,21 +30,22 @@ function MovieList(props) {
             >
               <NomComponent />
             </button>
-            <ToastContainer
-              position="top-right"
-              autoClose={500}
-              hideProgressBar
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              transition={Flip}
-            />
           </div>
         ))}
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={500}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        transition={Flip}
+      />
+      ;
     </>
   );
 }
