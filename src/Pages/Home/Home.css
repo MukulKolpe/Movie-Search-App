@@ -9,6 +9,13 @@
     width: 50%;
     object-fit: cover;   
 }
+.search-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
 @media only Screen and (max-width: 1024px) {
     .no-movies {
         display: flex;

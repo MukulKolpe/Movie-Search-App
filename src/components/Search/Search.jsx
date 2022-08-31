@@ -6,29 +6,16 @@ import "./Search.css";
 
 function Search(props) {
   return (
-    <div className="Search">
-      <Box
+    <div className="search">
+      <SearchIcon />
+      <input
+        type="text"
         className="search-input"
-        component="form"
-        sx={{
-          "& > :not(style)": { m: 1 },
+        placeholder="Search Movies..."
+        onChange={(event) => {
+          props.setValue(event.target.value);
         }}
-        autoSave="off"
-        noValidate
-      >
-        <SearchIcon fontSize="large" />
-        <TextField
-          className="text-input"
-          id="outlined-basic"
-          label="Search Movie..."
-          variant="outlined"
-          color="success"
-          value={props.value}
-          onChange={(event) => {
-            props.setValue(event.target.value);
-          }}
-        />
-      </Box>
+      />
     </div>
   );
 }

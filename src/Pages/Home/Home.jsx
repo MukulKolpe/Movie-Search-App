@@ -55,7 +55,7 @@ function Home() {
 
   return (
     <div className="container-fluid movie-app">
-      <div className="row d-flex align-items-center mt-4 mb-4">
+      <div className="search-area">
         <Search value={search} setValue={setSearch} />
       </div>
       <div className="row">
