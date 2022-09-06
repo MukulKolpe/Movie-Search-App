@@ -1,11 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaTimes, FaBars } from "react-icons/fa";
 import "./Navbar.css";
 import { useRef } from "react";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 
 const Navbar = () => {
+  const location = useLocation();
   const navRef = useRef();
 
   const showNavbar = () => {
@@ -14,6 +15,9 @@ const Navbar = () => {
   const hideNavbar = () => {
     navRef.current.classList.remove("responsive_nav");
   };
+  useEffect(() => {
+    hideNavbar();
+  }, [location]);
   return (
     <header>
       <span className="app-logo">

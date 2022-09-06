@@ -61,7 +61,7 @@ nav a {
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
-   
+
 }
 
 nav a:hover {
@@ -115,11 +115,12 @@ header .nav-btn {
     .navLink {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
         
     }
 
     nav a {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 }
 
