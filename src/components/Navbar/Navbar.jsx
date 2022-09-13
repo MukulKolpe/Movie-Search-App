@@ -31,7 +31,6 @@ const Navbar = () => {
         <div className="navLink">
           <Link to="/">Home</Link>
           <Link to="/nominees">Nominees</Link>
-          <Link to="/about">About</Link>
         </div>
         <button className="nav-btn nav-close-btn" onClick={hideNavbar}>
           <FaTimes />

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import NomineesPage from "./Pages/NomineesPage/NomineesPage";
 import Navbar from "./components/Navbar/Navbar";
-import About from "./Pages/About";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/nominees" element={<NomineesPage />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </div>
