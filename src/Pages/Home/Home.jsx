@@ -37,6 +37,7 @@ function Home() {
     Axios.get(url).then((response) => {
       searchMovies(response.data.Search);
     });
+    console.log(pageCount);
   };
 
   useEffect(() => {
