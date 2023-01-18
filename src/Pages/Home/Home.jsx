@@ -6,14 +6,19 @@ import AddNomination from "../../components/Buttons/AddNomination";
 import heroImg from "../../Assets/HeroImg.webp";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function Home() {
   const [movies, searchMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [nom, setNom] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
   const navigate = useNavigate();
 
+  let limit = 8;
   const movieRequest = async (searchString) => {
     const url = `https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`;
 
@@ -23,6 +28,15 @@ function Home() {
     if (response.data.Search) {
       searchMovies(response.data.Search);
     }
+  };
+
+  const handlePageClick = (event, value) => {
+    setPageCount(value);
+    const url = `https://www.omdbapi.com/?s=${search}&page=${value}&apikey=${API_KEY}`;
+
+    Axios.get(url).then((response) => {
+      searchMovies(response.data.Search);
+    });
   };
 
   useEffect(() => {
@@ -60,11 +74,27 @@ function Home() {
       </div>
       <div className="row">
         {movies.length > 0 ? (
-          <MovieList
-            movies={movies}
-            handleNomClick={nominateMovie}
-            nomComponent={AddNomination}
-          />
+          <div>
+            <MovieList
+              movies={movies}
+              handleNomClick={nominateMovie}
+              nomComponent={AddNomination}
+            />
+            <div className="pagination">
+              <Stack spacing={2}>
+                <Pagination
+                  count={limit}
+                  variant="outlined"
+                  shape="rounded"
+                  onChange={handlePageClick}
+                  size="large"
+                  tabIndex={-1}
+                  showFirstButton
+                  showLastButton
+                />
+              </Stack>
+            </div>
+          </div>
         ) : (
           <div className="no-movies">
             <img src={heroImg} alt="Movies-Landing" className="heroImg" />
