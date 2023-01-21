@@ -31,6 +31,8 @@ function Home() {
   };
 
   const handlePageClick = (event, value) => {
+    window.scrollTo(0, 0);
+
     setPageCount(value);
     const url = `https://www.omdbapi.com/?s=${search}&page=${value}&apikey=${API_KEY}`;
 
@@ -84,6 +86,7 @@ function Home() {
             <div className="pagination">
               <Stack spacing={2}>
                 <Pagination
+                  className="pagination-comp"
                   count={limit}
                   variant="outlined"
                   shape="rounded"
