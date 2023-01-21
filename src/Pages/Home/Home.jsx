@@ -95,6 +95,17 @@ function Home() {
                   tabIndex={-1}
                   showFirstButton
                   showLastButton
+                  sx={{
+                    "& .MuiPaginationItem-root": {
+                      boxShadow: 1,
+                      hover: {
+                        boxShadow: 2,
+                      },
+                      selected: {
+                        boxShadow: 10,
+                      },
+                    },
+                  }}
                 />
               </Stack>
             </div>
